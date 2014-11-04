@@ -16,6 +16,8 @@ Navigate to your video via terminal, and run ```sub <video-file-name>```
 ## How does it work?
 Sub uses Jsoup to parse Subscene's HTML. It the downloads the first result and unzips it to the directory.
 
+The script defaults to english subtitles.
+
 ## How do I build it?
 The project uses Maven, and you can build it using ```mvn package```.
 
@@ -25,3 +27,4 @@ The project uses Maven, and you can build it using ```mvn package```.
 * Commands for bash?
 * Better error-handling
 * Possibility to select sub-file self?
+* Change languages
