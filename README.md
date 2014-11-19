@@ -5,11 +5,11 @@ Sub is a CLI-command for downloading subtitles automagically from Subscene.com.
 
 ## How do I use it?
 
-You can run Sub using ```java -jar /path/to/sub_jar/sub-1.0.jar <video-file-name``` in the directory where the file is present.
+You can run Sub using ```java -jar /path/to/sub_jar/sub-1.1.jar <video-file-name>``` in the directory where the file is present.
 
-Or, to simplify things: add this to your zsh config: ```alias sub="java -jar /path/to/sub_jar/sub-1.0.jar "```
+Or, to simplify things: add this to your zsh config: ```alias sub="java -jar /path/to/sub_jar/sub-1.1.jar "```
 
-You may or may not need to add ```setopt completealiases``` to your .zshrc-file for autocompletion to work.
+You may or may not need to add ```setopt completealiases``` to your .zshrc-file for autocompletion (tab) to work.
 
 Navigate to your video via terminal, and run ```sub <video-file-name>```
 

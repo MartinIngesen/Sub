@@ -14,7 +14,7 @@ import java.net.URL;
  */
 public class ZipDownloader{
     public Zip download(URL url){
-        File destination = new File(url.getFile());
+        File destination = new File(Math.random()*5 + ".zip");
         try {
             FileUtils.copyURLToFile(url, destination);
         } catch (IOException e) {

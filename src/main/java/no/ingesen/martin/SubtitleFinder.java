@@ -17,7 +17,7 @@ public class SubtitleFinder {
 
     public static final String BASE_SEARCH_URL = "http://subscene.com/subtitles/release?q=";
     public static final String BASE_SUBTITLE_URL = "http://subscene.com";
-    private static String title;
+    private String title;
 
     public SubtitleFinder(String title) {
         this.title = title;
@@ -30,15 +30,12 @@ public class SubtitleFinder {
         Document doc = Jsoup.connect(BASE_SUBTITLE_URL + url).get();
         Elements link = doc.select(".button");
         String subtitle_url = link.get(0).toString().split("\"")[1];
-        System.out.println("Found subtitle.");
-        return new URL(subtitle_url);
+        return new URL(BASE_SUBTITLE_URL + subtitle_url);
     }
 
     private String getSubtitleURLs(String film_title) throws IOException {
         Document doc = Jsoup.connect(BASE_SEARCH_URL + film_title).cookie("LanguageFilter", "13").get();
         Elements links = doc.select("table .a1 a");
-        String url = links.get(0).attr("href");
-        System.out.println("Found subtitle-page: " + url);
-        return url;
+        return links.get(0).attr("href");
     }
 }
