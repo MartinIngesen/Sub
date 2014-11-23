@@ -51,7 +51,6 @@ public class TestZipDownloader {
     private int countZipFiles(File[] files) {
         int numOfZips = 0;
         for(File file : files){
-            System.out.println(file.toString());
             if(file.toString().endsWith(".zip"))
                 numOfZips++;
         }
