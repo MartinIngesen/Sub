@@ -1,5 +1,7 @@
 # Sub - The CLI-Subscene
 
+[![Build Status](https://travis-ci.org/MartinIngesen/Sub.svg?branch=master)](https://travis-ci.org/MartinIngesen/Sub)
+
 ## What is Sub?
 Sub is a CLI-command for downloading subtitles automagically from Subscene.com.
 
